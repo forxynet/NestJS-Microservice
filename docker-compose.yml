@@ -36,7 +36,7 @@ services:
   notifications:
     build:
       context: .
-      dockerfile: ./apps/notification/Dockerfile
+      dockerfile: ./apps/notifications/Dockerfile
       target: development
     command: pnpm run start:dev notifications
     env_file:
