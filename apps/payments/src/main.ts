@@ -1,8 +1,7 @@
-import { ValidationPipe } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { NestFactory } from '@nestjs/core';
 import { Transport } from '@nestjs/microservices';
-import { Logger } from "nestjs-pino";
+import { Logger } from 'nestjs-pino';
 import { PaymentsModule } from './payments.module';
 
 async function bootstrap() {

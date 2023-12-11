@@ -17,6 +17,4 @@ export class CreateChargeDto {
 
   @IsNumber()
   amount: number;
-
-
 }
