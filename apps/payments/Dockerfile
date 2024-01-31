@@ -4,19 +4,14 @@ WORKDIR /usr/src/app
 
 COPY package.json ./
 COPY pnpm-lock.yaml ./
-COPY tsconfig.json tsconfig.json
-COPY nest-cli.json nest-cli.json
 
 RUN npm install -g pnpm
 
 RUN pnpm install
 
-COPY apps/payments apps/payments
-COPY libs libs
+COPY . .
 
-RUN cd apps/payments && pnpm install
-
-RUN pnpm run build payments
+RUN pnpm run build
 
 FROM node:alpine as production
 
